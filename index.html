@@ -15,8 +15,10 @@
 
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
-
+  
   <body>
+   
+
     <header class="header">
       <div class="container main-nav">
         <nav class="main-nav">
@@ -57,12 +59,65 @@
     <main>
       <section class="hero">
         <h1 class="hero-text">
-          эффективные решения <br />
-          для вашего бизнеса
+        эффективные решения <br />
+       для вашего бизнеса
         </h1>
         <!-- <img src="./image/heading.svg" alt="" /> -->
-        <a href="" class="hero-button">Заказать услугу</a>
-      </section>
+        <button data-modal-open class="hero-button">Заказать услугу</button>
+        <div data-modal class="backdrop is-hidden">
+          <div class="modal">
+        
+            <form class="form-hero">
+        
+              <p class="form-head">Оставьте свои данные, мы вам перезвоним</p>
+        
+              <div class="form-field">
+        
+                <svg class="icon-text" width="18" height="18">
+                  <use href="./image/sprite2.svg#icon-person"></use>
+                </svg>
+        
+                <input type="text" id="text" class="form-input" placeholder="" />
+                <label for="text" class="form-label">Имя</label>
+              </div>
+        
+              <div class="form-field">
+                <svg class="icon-text" width="18" height="18">
+                  <use href="./image/sprite2.svg#icon-person"></use>
+                </svg>
+        
+        
+                <input type="phone" id="phone" class="form-input" placeholder="" />
+                <label for="phone" class="form-label">Телефон</label>
+              </div>
+        
+              <div class="form-field">
+                <svg class="icon-text" width="18" height="18">
+                  <use href="./image/sprite2.svg#icon-person"></use>
+                </svg>
+        
+        
+                <input type="email" id="email" class="form-input" placeholder="" />
+                <label for="email" class="form-label">Почта</label>
+              </div>
+        
+              <div class="form-field">
+                <textarea class="form-comment" name="comment" rows="5" cols="45" placeholder="Комментарий"></textarea>
+                <label for="comment" class="form-label"></label>
+              </div>
+              <label for="privat" class="form-field">Соглашаюсь с рассылкой и принимаю Условия договора
+                <input id="privat" name="privat" type="checkbox" />
+              </label>
+        
+              <button class="send-button">Отправить</button>
+              <button data-modal-close class="clouse-button"></button>
+        
+            </form>
+          </div>
+        </div>
+         </section>
+
+         
       <section class="section">
         <div class="container">
           <ul class="list-class">
@@ -335,22 +390,20 @@
             </li>
           </ul>
         </div>
-        <div class="na">
-          <p class="text-footer">ПОДПИСАТЬСЯ НА РАССЫЛКУ</p>
-          <ul class="navigation-button">
-            <li class="navigations">
-              <a href="" class="footers-button">E-mail</a>
-            </li>
-
-            <li class="navigations">
-              <a href="" class="footer-button">Подписаться</a>
-            </li>
-          </ul>
-        </div>
+        
+        <form class="form-footer"> 
+              <p class="form-heading">ПОДПИСАТЬСЯ НА РАССЫЛКУ</p>
+              <label for="email" ></label>
+              <div class="na">
+              <input type="email" id="email" class="footers-button" placeholder="    E-mail"/>
+            
+              <button type="submit" class="footer-button">Подписаться</button>
+            </form>
+          </div>
       </div>
       <p class="product">2020 &#10072; Developed by GoIT Students</p>
       
     </footer>
-    
+<script src="./js/modal.js"></script>
   </body>
 </html>
