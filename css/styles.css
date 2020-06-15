@@ -816,10 +816,6 @@ text-transform: uppercase; */
 
 /* форма зааказа */
 
-.form-hero {
-  display: inline-block;
-}
-
 .form-background {
   position: absolute;
   display: block;
@@ -846,17 +842,17 @@ text-transform: uppercase; */
     transform 250ms var(--timing-function);
 }
 .form-hero {
+  display: inline-block;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 528px;
   height: 581px;
-  background-color: greenyellow;
+  background: #ffffff;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  align-items: center;
 }
 
 .form-head {
@@ -870,25 +866,6 @@ text-transform: uppercase; */
   margin: 0;
   margin: 40px 40px 30px 40px;
 }
-.form-span {
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
-
-  color: #757575;
-}
-
-.form-input {
-  width: 448px;
-  height: 40px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  padding: 12px;
-  border-radius: 4px;
-  font-size: 16px;
-  outline: none;
-  margin: 0px 40px 30px 40px;
-  padding-left: 42px;
-}
 
 .form-comment {
   resize: none;
@@ -897,6 +874,7 @@ text-transform: uppercase; */
   width: 448px;
   height: 120px;
   padding: 12px 16px;
+  margin-bottom: 20px;
 }
 
 .send-button {
@@ -944,8 +922,7 @@ text-transform: uppercase; */
   position: absolute;
   top: 10px;
   left: 60px;
-
-  transition: top 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: #afb1b8;
 }
 
 .form-label {
@@ -958,7 +935,30 @@ text-transform: uppercase; */
   color: #757575;
 }
 
-.form-input:focus + .form-label {
+.form-input {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  margin: 0px 40px 30px 40px;
+  padding-left: 42px;
+}
+
+.form-input:focus,
+.form-input:hover,
+.form-comment:focus,
+.form-comment:hover,
+.form-label:focus,
+.form-label:hover {
+  border: 1px solid var(--colore-focus);
+  outline: none;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
   color: var(--colore-focus);
   top: -20px;
 }
