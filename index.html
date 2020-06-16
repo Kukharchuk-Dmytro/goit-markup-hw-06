@@ -103,10 +103,20 @@
                 <textarea class="form-comment" name="comment" rows="5" cols="45" placeholder="Комментарий"></textarea>
                 <label for="comment" class="form-label"></label>
               </div>
-              <label for="privat" class="form-field">Соглашаюсь с рассылкой и принимаю 
-                <a href="" class="form-span">Условия договора</a> 
-                <input id="privat" name="privat" type="checkbox" />
+              
+              <label for="privat" class="checkbox-label">
+              <input class="checkbox" id="privat" name="privat" type="checkbox" />
+              <span class="checkbox-icon"></span>
+              Соглашаюсь с рассылкой и принимаю <a href="" class="form-span">Условия договора</a>
               </label>
+
+              <!-- <label for="privat" class="checkbox-label">
+                Соглашаюсь с рассылкой и принимаю <a href="" class="form-span">Условия договора</a>
+                <input  name="privat" type="checkbox" class="checkbox"/>
+                
+              </label> -->
+
+
         
               <button class="send-button">Отправить</button>
               <button data-modal-close class="clouse-button"></button>

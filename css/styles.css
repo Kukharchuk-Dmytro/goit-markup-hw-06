@@ -970,3 +970,29 @@ text-transform: uppercase; */
 .form-input:focus ~ .icon {
   fill: var(--colore-focus);
 }
+
+.checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.checkbox-icon {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+.checkbox:checked + .checkbox-icon {
+  border-color: var(--logo-span);
+  background-color: var(--logo-span);
+  background-image: url(../image/check.svg);
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.checkbox-label {
+  display: block;
+}
